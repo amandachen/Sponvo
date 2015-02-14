@@ -12,7 +12,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<head>
 		<title>Sponvo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="The free Umbrella Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="shortcut icon" href="images/fav.png" />	
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -55,17 +54,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    		});
 			});
 		</script>
-	<script type="text/javascript">
-      function login () {
-	  var u = document.getElementById("Username").value;
+	<script type='text/javascript' 
+			src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js">
+	</script>
+	<script type='text/javascript' 
+			src='https://cdn.firebase.com/v0/firebase.js'>
+	</script>
+	<script type='text/javascript'
+	        src='https://cdn.firebase.com/v0/firebase-simple-login.js'>
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/LoginViewModel.js" 
+			defer="defer">
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/SignUpViewModel.js" 
+			defer="defer">
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/ViewModels.js" 
+			defer="defer">
+	</script>
 
-	  if (u=="Clara Spence")
-	      document.location = "student.html"
-
-	  else if (u=="Justin Iwerks")
-	      document.location = "teacher.html"
-      }
-    </script>
 </head>
 	<body>
 		<!-----start-container----->
@@ -140,13 +153,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div id="gallery" class="screen-shot-gallery">
 						<div class="container">
 
-							<form class="form-signin" role="form">
-          <input type="text" id="Username" class="login" placeholder="Username" required autofocus>
-          <br>
-          <input type="password" class="login" placeholder="Password" required>
-
-          <input type ="button" id="btnLogin" class="btn btn-lg btn-primary btn-block" onClick = "login()" style="width:200px" value="Sign in"/>
-	</form>
+							<div id="signup" class="well" data-bind="visible: signupVM.isVisible">
+		<div  class="span">
+			
+		    <h1>Sign up</h1>
+		    <br>
+		    <p>
+		    	<input type="text" class="input" placeholder="email" data-bind="value: signupVM.userName">
+		  		<input type="password" class="input" placeholder="Password" data-bind="value: signupVM.userPassword">
+		    </p>
+		    <br>
+		    <p>	
+			    <a class="btn btn-primary btn-large" data-bind="click:signupVM.signup">
+					Sign Up
+			    </a>
+			</p>
+			<br>
+			<p>
+			or if you've registered just ...
+			</p>
+			<br>
+			<p>
+			    <a class="btn btn-default btn-small" data-bind="click: loginVM.makeVisible">
+					Log In
+			    </a>
+		    </p>
+	    </div>
+	</div>
+	
+	<div id="login" class="well" data-bind="visible: loginVM.isVisible">
+		<div class="span">
+		  	<h1>Log in here!</h1>
+		    <p>
+		    	<input type="text" class="input" placeholder="Email" data-bind="value: loginVM.userName">
+		  		<input type="password" class="input" placeholder="Password" data-bind="value: loginVM.userPassword">
+		    </p>
+		    <p>	
+			    <a class="btn btn-primary btn-large" data-bind="click:loginVM.login">
+					Log In
+			    </a>
+			</p>
+		</div>
+	</div>
+	
 					
 						</div>
 						<!----sreen-gallery-cursual---->
