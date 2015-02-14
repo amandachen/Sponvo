@@ -1,0 +1,190 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Sponvo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="The free Umbrella Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="images/fav.png" />	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		 <!---- start-smoth-scrolling---->
+
+		<script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+
+		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!----webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+			var myDataRef = new Firebase('https://sponvo.firebaseio.com');
+
+			function sendMessage(){
+				var message = document.getElementById("late").innerHTML;
+				myDataRef.push(message);
+				location.href = 'sent.html'
+			}
+
+
+			function sendMessage2(){
+				var message2 = document.getElementById("sick").innerHTML;
+				myDataRef.push(message2);
+				location.href = 'sent.html'
+			}
+
+			function sendMessage3(){
+				var message3 = document.getElementById("nurse").innerHTML;
+				myDataRef.push(message3);
+				location.href = 'sent.html'
+			}
+
+			function sendMessage4(){
+				var message4 = document.getElementById("assignment").innerHTML;
+				myDataRef.push(message4);
+				location.href = 'sent.html'
+			}
+
+			function sendMessage5(){
+				var message5 = document.getElementById("bathroom").innerHTML;
+				myDataRef.push(message5);
+				location.href = 'sent.html'
+			}
+		</script>
+
+			
+</head>
+	<body>
+		<!-----start-container----->
+		<!-----header-section------>
+		<div class="header-section">
+			<!----- start-header---->
+			<div id="home" class="header">
+				<div class="container">
+					<div class="top-header">
+						<div class="logo">
+							<a href="#"><img src="Sponvo.png" width="70" height="50" title="logo" /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="active"><a onclick="location.href='sent.html'" href="index.html" class="scroll">Home</a></li>
+
+								<li class="page-scroll"><a href="#fea" class="scroll">About</a></li>
+								<li class="page-scroll"><a href="#gallery" class="scroll">Bio</a></li>
+								<li class="page-scroll"><a href="#about" class="scroll">Contact</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						</nav>
+						
+				</div>
+			</div>
+			
+	
+			</div></br></br>
+
+<!-- Single button -->
+<center>
+<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dr. Iwerks<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+  	<li role="presentation"><a oncLick='sendMessage()' role="menuitem" tabindex="-1" id="late" href="#">Hi Dr. Iwerks, I'm running late. Sorry! </a></li>
+  	<li role="presentation"><a oncLick='sendMessage2()'role="menuitem" tabindex="-1" id="sick" href="#">I'm at home sick today.</a></li>
+  	<li role="presentation"><a oncLick='sendMessage3()'role="menuitem" tabindex="-1"  id="nurse" href="#">I'm at the nurse.</a></li>
+  	<li role="presentation"><a oncLick='sendMessage4()'role="menuitem" tabindex="-1" id="assignment"href="#">I will leave the assignment on your desk.</a></li>
+  	<li role="presentation"><a oncLick='sendMessage5()' role="menuitem" tabindex="-1" id="bathroom" href="#">I'm in the bathroom. Be back soon.</a></li>
+  	</ul>
+</div></br></br>
+   
+   <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Mr. Zahler <span class="caret"></span>
+  </button>
+ 	<ul class="dropdown-menu" role="menu">
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hi Mr. Zahler, I'm running late. Sorry! </a></li> 
+  		
+  		<a href type="button" oncLick="location.href='index.html'" class="btn btn-primary btn-group-lg"><a>
+
+
+ 
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm at home sick today.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm at the nurse.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I will leave the assignment on your desk.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm in the bathroom. Be back soon.</a></li>
+  	</ul>
+  </div></br></br>
+    
+
+  <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Ms. Starr <span class="caret"></span>
+  </button>
+  	<ul class="dropdown-menu" role="menu">
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hi Ms. Starr, I'm running late. Sorry! </a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm at home sick today.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm at the nurse.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I will leave the assignment on your desk.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm in the bathroom. Be back soon.</a></li>
+  	</ul>
+	</div></br></br>
+
+  <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Ms. Wendler <span class="caret"></span>
+  </button>
+  	<ul class="dropdown-menu" role="menu">
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hi Ms. Wendler, I'm running late. Sorry! </a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm at home sick today.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm at the nurse.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I will leave the assignment on your desk.</a></li>
+  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">I'm in the bathroom. Be back soon.</a></li>
+  	</ul>
+  </center>
+	</div>
+  <ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu" role="menu">
+  </ul>
+</div></br></br>
+	</body>
+
+</html>
+

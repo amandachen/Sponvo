@@ -1,0 +1,266 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sponvo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="The free Umbrella Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="images/fav.png" />	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<!----//webfonts---->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+	<script type="text/javascript">
+      function login () {
+	  var u = document.getElementById("Username").value;
+
+	  if (u=="Clara Spence")
+	      document.location = "student.html"
+
+	  else if (u=="Justin Iwerks")
+	      document.location = "teacher.html"
+      }
+    </script>
+</head>
+	<body>
+		<!-----start-container----->
+		<!-----header-section------>
+		<div class="header-section">
+			<!----- start-header---->
+			<div id="home" class="header">
+				<div class="container">
+					<div class="top-header">
+						<div class="logo">
+							<a href="#"><img src="Sponvo.png" width="70" height="50" title="logo" /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="active"><a onclick="location.href='/index.html'"href="index.html" class="scroll">Home</a></li> 
+								<li class="page-scroll"><a href="#fea" class="scroll">FEATURES</a></li>
+								<li class="page-scroll"><a href="#gallery" class="scroll">Gallery</a></li>
+								<li class="page-scroll"><a href="#about" class="scroll">About </a></li>
+								<li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">Contact</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+						</nav>
+
+						
+						
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----- start-slider---->
+			<!----start-slider-script---->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!----//End-slider-script---->
+			
+			          
+			          	</div>
+			          </div>
+			       
+			    
+						</div><!---end-features-grid---->
+						
+							
+						</div><!---end-features-grid---->
+						
+				</div>
+					<!----//features-grids----->
+					<!----//features----->
+					<!----screen-shot-gallery---->
+					<div id="gallery" class="screen-shot-gallery">
+						<div class="container">
+
+							
+						</div>
+						<!----sreen-gallery-cursual---->
+						<div class="sreen-gallery-cursual">
+							 <!-- requried-jsfiles-for owl -->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 3,
+							        lazyLoad : true,
+							        autoPlay : true,
+							      });
+							    });
+							    </script>
+							 <!-- //requried-jsfiles-for owl -->
+							 <!-- start content_slider -->
+						
+						</div>
+						<!--//sreen-gallery-cursual---->
+					</div>
+				</div>
+				<!--//screen-shot-gallery---->
+				<!---- show-reel ---->
+				<!---pop-up-box---->
+					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+					<!---//pop-up-box---->
+				<div class="show-reel text-center">
+				
+					 <script>
+							$(document).ready(function() {
+							$('.popup-with-zoom-anim').magnificPopup({
+								type: 'inline',
+								fixedContentPos: false,
+								fixedBgPos: true,
+								overflowY: 'auto',
+								closeBtnInside: true,
+								preloader: false,
+								midClick: true,
+								removalDelay: 300,
+								mainClass: 'my-mfp-zoom-in'
+							});
+																							
+							});
+					</script>	
+					</div>
+				</div>
+				<!---- //show-reel ---->
+<center><h3>Welcome, Dr. Justin Iwerks!</h3></center>
+<br><br>
+				
+ 
+					       </div>
+					       <div class="item">
+					       		<p> <div class="btn-group">
+  <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Mark As Read</a></li>
+    <li><a href="#">Mark for Later Review</a></li>
+    <li class="divider"></li>
+    <li><a href="www.email.spenceschool.org">Email Student</a></li>
+  </ul>
+</div> 9:57 am | <b>Hannah Posner</b>: Hi Dr. Iwerks, I'm running late. Sorry!</p>
+					       </div>
+					       <div class="item">
+					       		<p> <div class="btn-group">
+  <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Mark As Read</a></li>
+    <li><a href="#">Mark for Later Review</a></li>
+    <li class="divider"></li>
+    <li><a href="www.email.spenceschool.org">Email Student</a></li>
+  </ul>
+</div> 10:01 am | <b>Amanda Chen</b>: I will leave the assignment on your desk.</p>
+					       </div>
+					       <div class="item">
+					       		<p> <div class="btn-group">
+  <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Mark As Read</a></li>
+    <li><a href="#">Mark for Later Review</a></li>
+    <li class="divider"></li>
+    <li><a href="www.email.spenceschool.org">Email Student</a></li>
+  </ul>
+</div> 10:10 am | <b>Olive Numeroff</b>: I'm in the bathroom. Be back soon.</p>
+					       </div>
+					       <div class="item">
+					       		<p> <div class="btn-group">
+  <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Mark As Read</a></li>
+    <li><a href="#">Mark for Later Review</a></li>
+    <li class="divider"></li>
+    <li><a href="www.email.spenceschool.org">Email Student</a></li>
+  </ul>
+</div> Just now | <b>Clara Spence</b>: I'm at the nurse.</p>
+
+			
+					</div>
+				</div>
+				<!----//team---->
+				<div class="clear"> </div>
+				<!----people-says----->
+					
+				         </div>
+					</div>
+				<!----//people-says----->
+				<!-----FEATURED----->
+				<div class="featured">
+					<div class="section-head text-center">
+						
+			</div>
+			
+			
+	</body>
+</html>
+
